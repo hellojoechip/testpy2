@@ -15,6 +15,7 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
+        curl -X POST -H "Content-Type: application/json" -d '{"value1":"test1","value2":"test2","value3":"test3"}' https://maker.ifttt.com/trigger/telegram1234/with/key/cwlBmjg4cNE8S66APBk6j
         python -m pip install --upgrade pip
         pip install pylint
     - name: Analysing the code with pylint
